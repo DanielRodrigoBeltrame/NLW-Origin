@@ -5,6 +5,7 @@
 
 :root {
   --primary-color: hsl(170, 100%, 26%);
+  --primary-light: hsl(148, 23%, 89%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
 
@@ -26,6 +27,11 @@ header {
 
   padding-right: 2rem;
   padding-left: 2rem;
+
+  background: linear-gradient(180deg, var(--primary-light) 80%, white 46%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h4 {
@@ -72,4 +78,35 @@ button {
 
   margin-right: auto;
   margin-left: auto;
+}
+
+img {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#container {
+  background-color: #fffaf1;
+  width: 32.7rem;
+  height: 47rem;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  justify-content: space-around;
+}
+
+.dados h3 {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+#pacientes {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+.dados p {
+  color: var(--primary-color);
+
 }
