@@ -6,13 +6,16 @@
 }
 
 :root {
-  --primary-color: hsl(170, 100%, 26%);
-  --primary-light: hsl(148, 23%, 89%);
+  --heu: 210;
+  --primary-color: hsl(var(--heu), 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+
   --brand-color: hsl(39, 100%, 97%);
+  --primary-light: hsl(calc(var(--heu) - 22), 23%, 89%);
+  --brand-button-hover--: hsl(var(--heu), 100%, 14%);
+
   --bg-light: hsl(180, 14, 97);
-  --brand-button-hover--: hsl(170, 100%, 14%);
 
   font-size: 62.5%; /*1rem = 10px */
 
@@ -119,6 +122,36 @@ section .content p {
 .button:hover {
   background-color: var(--brand-button-hover--);
 }
+
+/*==========Custom colors====================*/
+
+#services .card circle {
+  fill: var(--primary-light);
+}
+
+#services .card path {
+  stroke: var(--primary-color);
+}
+
+#navigation .logo path[fill*='#00856F'],
+#backToTopButton circle {
+  fill: var(--primary-color);
+}
+
+button.open-menu path[stroke*='#00856F'],
+#contact li path {
+  stroke: var(--primary-color);
+}
+
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path {
+  fill: white;
+}
+
+#navigation.scroll button.open-menu path[stroke*='#00856F'] {
+  stroke: white;
+}
+
 /*==========HOME====================*/
 #home .wrapper {
   width: 37.5rem;
@@ -222,14 +255,6 @@ nav .wrapper {
 
 nav.scroll {
   background-color: var(--primary-color);
-}
-
-nav.scroll .logo path {
-  fill: white;
-}
-
-nav.scroll button path {
-  stroke: white;
 }
 
 nav button {
