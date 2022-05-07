@@ -1,6 +1,6 @@
 function onScroll() {
   showNavOnScroll()
-  backToTopButtonOnScroll()
+  showBackToTopButtonOnScroll()
 }
 
 function showNavOnScroll() {
@@ -11,8 +11,8 @@ function showNavOnScroll() {
   }
 }
 
-function backToTopButtonOnScroll() {
-  if (scrollY > 50) {
+function showBackToTopButtonOnScroll() {
+  if (scrollY > 500) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
