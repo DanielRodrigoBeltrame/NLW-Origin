@@ -155,12 +155,9 @@ body.menu-expanded #navigation .logo path,
 
 /*==========HOME====================*/
 #home .wrapper {
-  width: 37.5rem;
+  width: 100%;
   margin-inline: auto;
   padding-inline: 2.4rem;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
 }
 
 #home {
@@ -630,8 +627,14 @@ footer .social-links {
   }
 
   /*===HOME================================*/
+  #home::before{
+    height: calc(100% - var(--nav-height));
+  }
+  #home {
+    padding-top: var(--nav-height);
+  }
   #home .wrapper {
-    display: grid;
+    grid-template-columns: 60.5rem 1fr;
     grid-template-areas:
       'A B'
       'C C';
@@ -639,13 +642,43 @@ footer .social-links {
 
   #home .col-a {
     grid-area: A;
+    text-align: left;
+    align-items: center;
   }
 
   #home .col-b {
     grid-area: B;
   }
 
+  #home h1 {
+    font-size: 5.2rem;
+  }
+
+  #home .content p {
+    font-size: 1.8rem;
+  }
+
   #home .container {
     grid-area: C;
+    flex-direction: row;
+    padding: 6rem;
+    gap: 0;
+  }
+
+  #home .container .dados + .dados {
+    border-left: 1px solid var(--primary-color);
+  }
+
+  #home .container {
+    width: 100%;
+    margin-top: 0%;
+  }
+
+  #home .container .dados {
+    flex: 1;
+  }
+
+  #home img {
+    margin-bottom: 0;
   }
 }
