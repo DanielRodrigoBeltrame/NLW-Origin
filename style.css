@@ -627,8 +627,8 @@ footer .social-links {
   }
 
   /*===HOME================================*/
-  #home::before{
-    height: calc(100% - var(--nav-height));
+  #home::before {
+    height: calc(88% - var(--nav-height));
   }
   #home {
     padding-top: var(--nav-height);
@@ -643,11 +643,12 @@ footer .social-links {
   #home .col-a {
     grid-area: A;
     text-align: left;
-    align-items: center;
+    align-self: center;
   }
 
   #home .col-b {
     grid-area: B;
+    display: flex;
   }
 
   #home h1 {
@@ -679,6 +680,6 @@ footer .social-links {
   }
 
   #home img {
-    margin-bottom: 0;
+    width: 42rem;
   }
 }
