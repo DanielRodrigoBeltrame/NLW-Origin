@@ -4,6 +4,12 @@ onScroll()
 function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()
+
+  activateMenuAtCurrenSection()
+}
+
+function activateMenuAtCurrenSection() {
+  const targetLine = scrollY + innerHeight / 2
 }
 
 function showNavOnScroll() {
